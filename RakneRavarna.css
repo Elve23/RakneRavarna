@@ -1,1 +1,12 @@
 body {background-color: rgba(114, 116, 95, 0.917);}
+ footer {/*För att få footern positionerad längst ner på varje sida*/
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color:#0c0c0cd3;
+        color:#fbfbfbd3;
+        font-family: 'Nunito';
+        padding: 10px;
+        text-align: center;
+      }
