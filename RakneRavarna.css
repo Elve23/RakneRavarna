@@ -102,32 +102,42 @@ footer {
   height: 87px;
   left: 280px;
   top: 50px;
-  
+
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 700;
   font-size: 64px;
   line-height: 87px;
   text-align: center;
-  
+
   color: #000000;
-  }
-  
-  .vilkaarvitext {
+}
+
+.vilkaarvitext {
   position: absolute;
   width: 723px;
   height: 198px;
   left: 70px;
   top: 150px;
-  
+
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   text-align: center;
-  
+
   color: #000000;
-  }
-  
-  
+}
+
+.orangesquare {
+  position: absolute;
+  left: 22.85%;
+  right: 22.85%;
+  top: 8.33%;
+  bottom: 14.74%;
+
+  background: rgba(233, 143, 35, 0.6);
+  border-radius: 104px;
+
+}
