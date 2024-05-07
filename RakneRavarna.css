@@ -132,12 +132,16 @@ footer {
 
 .orangesquare {
   position: absolute;
+  display: grid;
+  grid-template-columns: repeat(4, 100px); /*rutnät för kort*/
+  grid-template-rows: repeat(4, 100px);/*rutnät för kort*/
   left: 22.85%;
   right: 22.85%;
   top: 8.33%;
   bottom: 14.74%;
   background: rgba(233, 143, 35, 0.6);
   border-radius: 104px;
+  z-index: 1;
 
 }
 
