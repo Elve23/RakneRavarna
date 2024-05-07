@@ -136,8 +136,22 @@ footer {
   right: 22.85%;
   top: 8.33%;
   bottom: 14.74%;
-
   background: rgba(233, 143, 35, 0.6);
   border-radius: 104px;
 
+}
+
+.left-image {
+  position: absolute;
+  top: 250px; /* Justera önskad avstånd från toppen */
+  left: 50px; /* Justera önskad avstånd från vänster */
+  z-index: 2; /* Se till att bilden ligger över spelet */
+}
+
+.right-image {
+  position: absolute;
+  top: 350px; /* Justera önskad avstånd från toppen */
+  right: 100px; /* Justera önskad avstånd från höger */
+  z-index: 2; /* Se till att bilden ligger över spelet */
+  filter: brightness(0);
 }
