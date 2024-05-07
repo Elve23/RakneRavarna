@@ -133,8 +133,8 @@ footer {
 .orangesquare {
   position: absolute;
   display: grid;
-  grid-template-columns: repeat(4, 100px); /*rutnät för kort*/
-  grid-template-rows: repeat(4, 100px);/*rutnät för kort*/
+  grid-template-columns: repeat(4, 100px); /*rutnät för*/
+  grid-template-rows: repeat(4, 100px);
   left: 22.85%;
   right: 22.85%;
   top: 8.33%;
@@ -159,4 +159,11 @@ footer {
   right: 100px; /* Justera önskad avstånd från höger */
   z-index: 2; /* Se till att bilden ligger över spelet */
   filter: brightness(0);
+}
+.vem-image {
+  position: absolute;
+  top: 250px; /* Justera önskad avstånd från toppen */
+  left: 0px; /* Justera önskad avstånd från vänster */
+  z-index: 2; /* Se till att bilden ligger över spelet */
+  width: 450px;
 }
