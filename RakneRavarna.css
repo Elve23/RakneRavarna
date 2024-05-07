@@ -1,6 +1,6 @@
 /*För att få footern positionerad längst ner på varje sida*/
 body {
-  background-color: rgba(114, 116, 95, 0.917);
+  background-image: url(Bakgrund.png);
 }
 
 main {
