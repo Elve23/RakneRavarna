@@ -1,6 +1,10 @@
 /*För att få footern positionerad längst ner på varje sida*/
 body {
   background-image: url(Bakgrund.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 main {
@@ -8,6 +12,8 @@ main {
   justify-content: center;
   align-content: center;
 }
+
+
 
 footer {
   position: fixed;
@@ -20,6 +26,7 @@ footer {
   padding: 10px;
   text-align: center;
 }
+
 
 .greysquare {
   position: absolute;
