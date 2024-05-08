@@ -1,10 +1,12 @@
 /*För att få footern positionerad längst ner på varje sida*/
 body {
   background-image: url(Bakgrund.png);
+  
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
 main {
@@ -12,6 +14,7 @@ main {
   justify-content: center;
   align-content: center;
 }
+
 
 
 
