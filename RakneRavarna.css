@@ -94,7 +94,24 @@ footer {
 
   color: #000000;
 }
-
+.flex-container {/* ej klar!*/
+  display: flex;
+  flex-direction: row;
+}
+.bild-container {/*ej klar!*/
+  stroke-width: 20%;
+  max-width: 100%; 
+  height: auto;
+  margin-left: 70%;
+  object-position: 70%;
+  overflow: hidden;
+}
+img {/*ej klar!*/
+width: auto;
+max-width: 250px;
+margin: 0%;
+position: left;
+}
 
 .VAVtitle {
   position: absolute;
