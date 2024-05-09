@@ -1,4 +1,3 @@
-/*För att få footern positionerad längst ner på varje sida*/
 body {
   background-image: url(Bakgrund.png);
   
@@ -14,8 +13,6 @@ main {
   justify-content: center;
   align-content: center;
 }
-
-
 
 
 footer {
@@ -104,23 +101,20 @@ footer {
 
   color: #000000;
 }
-.flex-container {/* ej klar!*/
-  display: flex;
-  flex-direction: row;
-}
-.bild-container {/*ej klar!*/
-  stroke-width: 20%;
+.bild-container {
   max-width: 100%; 
-  height: auto;
-  margin-left: 70%;
-  object-position: 70%;
+  height: 450px;
+  margin-left: 75%;
+  object-position: bottom;
   overflow: hidden;
 }
-img {/*ej klar!*/
+img {
+float: right; 
 width: auto;
 max-width: 250px;
 margin: 0%;
-position: left;
+position:relative;
+top: 150px;
 }
 
 .VAVtitle {
