@@ -1,6 +1,12 @@
 /*För att få footern positionerad längst ner på varje sida*/
 body {
-  background-color: rgba(114, 116, 95, 0.917);
+  background-image: url(Bakgrund.png);
+  
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
 main {
@@ -8,6 +14,9 @@ main {
   justify-content: center;
   align-content: center;
 }
+
+
+
 
 footer {
   position: fixed;
@@ -21,15 +30,16 @@ footer {
   text-align: center;
 }
 
+
 .greysquare {
   position: absolute;
   width: 877px;
   height: 420px;
   left: 282px;
   top: 89px;
-
   background: #E1E1E1;
   border-radius: 104px;
+  z-index: 1;
 }
 
 .center-button {
@@ -149,12 +159,38 @@ position: left;
 
 .orangesquare {
   position: absolute;
+  display: grid;
+  grid-template-columns: repeat(4, 100px); /*rutnät för*/
+  grid-template-rows: repeat(4, 100px);
   left: 22.85%;
   right: 22.85%;
   top: 8.33%;
   bottom: 14.74%;
-
   background: rgba(233, 143, 35, 0.6);
   border-radius: 104px;
+  z-index: 1;
 
+}
+
+.left-image {
+  position: absolute;
+  top: 250px; /* Justera önskad avstånd från toppen */
+  left: 50px; /* Justera önskad avstånd från vänster */
+  z-index: 2; /* Se till att bilden ligger över spelet */
+  width: 450px;
+}
+
+.right-image {
+  position: absolute;
+  top: 350px; /* Justera önskad avstånd från toppen */
+  right: 100px; /* Justera önskad avstånd från höger */
+  z-index: 2; /* Se till att bilden ligger över spelet */
+  filter: brightness(0);
+}
+.vem-image {
+  position: absolute;
+  top: 250px; /* Justera önskad avstånd från toppen */
+  left: 0px; /* Justera önskad avstånd från vänster */
+  z-index: 2; /* Se till att bilden ligger över spelet */
+  width: 450px;
 }
