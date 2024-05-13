@@ -187,7 +187,7 @@ top: 150px;
 .vem-spelet-image {
   position: absolute;
   top: 280px; /* Justera önskad avstånd från toppen */
-  left: 30px; /* Justera önskad avstånd från vänster */
+  left: -5px; /* Justera önskad avstånd från vänster */
   z-index: 2; /* Se till att bilden ligger över spelet */
   width: 450px;
 }
