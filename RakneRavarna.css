@@ -108,10 +108,10 @@ footer {
   object-position: bottom;
   overflow: hidden;
 }
+
 img {
 float: right; 
 width: auto;
-max-width: 250px;
 margin: 0%;
 position:relative;
 top: 150px;
@@ -168,23 +168,24 @@ top: 150px;
 
 .left-image {
   position: absolute;
-  top: 250px; /* Justera önskad avstånd från toppen */
-  left: 50px; /* Justera önskad avstånd från vänster */
+  top: 170px; /* Justera önskad avstånd från toppen */
+  left: 570px; /* Justera önskad avstånd från vänster */
   z-index: 2; /* Se till att bilden ligger över spelet */
-  width: 450px;
+  width: 480px;
 }
 
 .right-image {
   position: absolute;
-  top: 350px; /* Justera önskad avstånd från toppen */
-  right: 100px; /* Justera önskad avstånd från höger */
+  top: 430px; /* Justera önskad avstånd från toppen */
+  right: 90px; /* Justera önskad avstånd från höger */
   z-index: 2; /* Se till att bilden ligger över spelet */
   filter: brightness(0);
 }
-.vem-image {
+
+.vem-spelet-image {
   position: absolute;
-  top: 250px; /* Justera önskad avstånd från toppen */
-  left: 0px; /* Justera önskad avstånd från vänster */
+  top: 280px; /* Justera önskad avstånd från toppen */
+  left: 30px; /* Justera önskad avstånd från vänster */
   z-index: 2; /* Se till att bilden ligger över spelet */
   width: 450px;
 }
