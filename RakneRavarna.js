@@ -1,22 +1,22 @@
 /* Set the width of the sidebar to 250px (show it) */
 function openNav() {
     document.getElementById("mySidepanel").style.width = "250px";
-  }
-  
-  /* Set the width of the sidebar to 0 (hide it) */
-  function closeNav() {
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
     document.getElementById("mySidepanel").style.width = "0";
-  }
+}
 
-  // kod natalie spel :
+// kod natalie spel :
 
-  const cards = document.querySelectorAll('.item');
+const cards = document.querySelectorAll('.item');
 let firstCard = null;
 
 function flipCard(event) {
     const clickedCard = event.currentTarget;
 
-    if(isCardLocked(clickedCard)){
+    if (isCardLocked(clickedCard)) {
         return
     }
 
@@ -37,18 +37,22 @@ function flipCard(event) {
             lockCard(clickedCard)
             firstCard = null
         }
-    
+
     } else {
         // Om det inte finns något första kort valt än, spara det klickade kortet som första kort
         firstCard = clickedCard;
     }
 }
 
-function lockCard(card){
+function lockCard(card) {
     card.classList.add('matched')
+    /* För att få korten att bli orange vid match*/
+    setTimeout(() => {
+        card.classList.add('active-done')
+    }, 1000);
 }
 
-function isCardLocked(card){
+function isCardLocked(card) {
 
     let isCardLocked = card.classList.contains('matched')
 
@@ -57,12 +61,5 @@ function isCardLocked(card){
 }
 
 
-
-function refreshPage() {
-    location.reload(); // Ladda om sidan
-}
-
-
 // Lägg till händelselyssnare för klick på varje kort
 cards.forEach(card => card.addEventListener('click', flipCard));
-document.getElementById("reloadButton").addEventListener("click", refreshPage);
