@@ -248,3 +248,95 @@ top: 150px;
 .openbtn:hover {
   background-color: #e3e3e3;
 }
+
+.spelcontainer {
+  background-color: rgba(233, 143, 35, 0.6);
+  height: 500px;
+  width: 720px;
+  border-radius: 80px;;
+  position: relative; /* Gör rutan relativt positionerad */
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  gap: 60px;
+  justify-content: center; 
+  margin:auto;
+  margin-left: 0;
+  margin-top: 0;
+  padding-top: 40px;
+  z-index: 1; 
+}
+
+.container {
+  position: relative; /* Gör containeren relativt positionerad för att underlätta placering av barnen */
+}
+
+.item {
+    position: relative;
+    background-color:#FFF;
+    width: 139px;
+    height: 139px;
+    transition: transform 0.3s ease;
+}
+  
+.item img {
+    width: 139px;
+    height: 139px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transition: transform 0.3s ease;
+}
+
+.front {
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.flip {
+  transform: rotateY(180deg);
+  transform-style: preserve-3d; /* Säkerställ att 3D-rotation används */
+}
+
+.baksida {
+  width: 139px;
+  height: 139px;
+  position: absolute;
+  top: 0;
+  left: -20px;
+  backface-visibility: hidden;
+  transition: transform 0.3s ease;
+}
+
+/* Baksidan match med grön, ska vi ha det eller räcker det att den blir orange när det är rätt?*/
+.active-match{
+  transition: all 2s ease;
+  background-color: #B8EB85;
+  height: 139px;
+  width: 139px;
+}
+
+/* Baksidan röd om det är fel*/
+.active-non-match{
+  transition: all 2s ease;
+  background-color: #FFA7A7;
+  height: 139px;
+  width: 139px;
+}
+
+/* Baksidan orange när det är en match*/
+.active-done{
+  transition: all 2s ease;
+  background-color: #BE6F29;
+  height: 139px;
+  width: 139px;
+}
+
+/* För att få siffran centrerad i baksidans kort*/
+.centersiffra{
+ left: -40px;
+}
