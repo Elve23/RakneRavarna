@@ -339,3 +339,32 @@ top: 150px;
 .centersiffra{
  left: -40px;
 }
+
+.drag{
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 49px;
+  text-align: center;
+  color: #FFF;
+  z-index: 3;
+  top: 63%; /* Justera önskad avstånd från toppen */
+  right: 10.5%;
+  position: absolute;
+}
+
+.missar{
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 49px;
+  text-align: center;
+  color: #FFF;
+  z-index: 3;
+  top: 72%; /* Justera önskad avstånd från toppen */
+  right: 9%;
+  rotate: 2%;
+  position: absolute;
+}

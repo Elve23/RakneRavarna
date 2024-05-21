@@ -86,10 +86,6 @@ shuffledcards.forEach(element => {
     framsidan.src = 'Tassavtryck.jpg';
     framsidan.classList.add('front');
 
-    cardDiv.appendChild(framsidan);
-
-    spelContainer.appendChild(cardDiv);
-
     // Skapa tal sidan
     var talDiv = document.createElement("div");
     talDiv.classList.add("baksida");
@@ -100,9 +96,12 @@ shuffledcards.forEach(element => {
     sifferDiv.classList.add("undertitle");
     sifferDiv.innerText = element["tal"]
 
+    talDiv.appendChild(sifferDiv);
     cardDiv.appendChild(talDiv);
 
-    talDiv.appendChild(sifferDiv);
+    cardDiv.appendChild(framsidan);
+
+    spelContainer.appendChild(cardDiv);
 
 });
 
@@ -111,7 +110,14 @@ shuffledcards.forEach(element => {
 const cards = document.querySelectorAll('.item');
 let firstCard = null;
 
+let drag = 0;
+let missar = 0;
+
 function flipCard(event) {
+    drag++;
+    var dragdiv = document.getElementById('drag');
+    dragdiv.innerText = ('Drag: ') + drag;
+    console.log('drag:', drag)
     const clickedCard = event.currentTarget;
 
     if (isCardLocked(clickedCard)) {
@@ -125,6 +131,10 @@ function flipCard(event) {
         if (firstCard.dataset.id !== clickedCard.dataset.id) {
             // Om korten har olika id, vänd tillbaka dem efter en fördröjning
             console.log("Korten har olika id, vänd tillbaka dem.");
+            missar++;
+            var missardiv = document.getElementById('missar');
+            missardiv.innerText = ('Missar: ') + drag;
+            console.log('missar:', missar)
             setTimeout(() => {
                 firstCard.classList.remove('flip');
                 clickedCard.classList.remove('flip');
@@ -157,7 +167,6 @@ function isCardLocked(card) {
     return isCardLocked
 
 }
-
 
 // Lägg till händelselyssnare för klick på varje kort
 cards.forEach(card => card.addEventListener('click', flipCard));
