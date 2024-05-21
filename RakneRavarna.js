@@ -116,7 +116,7 @@ let missar = 0;
 function flipCard(event) {
     drag++;
     var dragdiv = document.getElementById('drag');
-    dragdiv.innerText = ('Drag: ') + drag;
+    dragdiv.innerText = 'Drag: ' + drag;
     console.log('drag:', drag)
     const clickedCard = event.currentTarget;
 
@@ -133,7 +133,7 @@ function flipCard(event) {
             console.log("Korten har olika id, vänd tillbaka dem.");
             missar++;
             var missardiv = document.getElementById('missar');
-            missardiv.innerText = ('Missar: ') + drag;
+            missardiv.innerText = 'Missar: ' + missar;
             console.log('missar:', missar)
             setTimeout(() => {
                 firstCard.classList.remove('flip');
