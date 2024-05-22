@@ -313,18 +313,16 @@ top: 150px;
 
 /* Baksidan match med grön, ska vi ha det eller räcker det att den blir orange när det är rätt?*/
 .active-match{
-  transition: all 2s ease;
+  transition: all 1s ease;
   background-color: #B8EB85;
   height: 139px;
   width: 139px;
 }
 
 /* Baksidan röd om det är fel*/
-.active-non-match{
-  transition: all 2s ease;
-  background-color: #FFA7A7;
-  height: 139px;
-  width: 139px;
+.wrong {
+  background-color: rgb(233, 150, 150) !important;
+  transition: background-color 1s ease;
 }
 
 /* Baksidan orange när det är en match*/

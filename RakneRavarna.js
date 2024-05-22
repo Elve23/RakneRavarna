@@ -110,14 +110,12 @@ shuffledcards.forEach(element => {
 const cards = document.querySelectorAll('.item');
 let firstCard = null;
 
+// Drag är 0 från början
 let drag = 0;
+// Missar är 0 från början
 let missar = 0;
 
 function flipCard(event) {
-    drag++;
-    var dragdiv = document.getElementById('drag');
-    dragdiv.innerText = 'Drag: ' + drag;
-    console.log('drag:', drag)
     const clickedCard = event.currentTarget;
 
     if (isCardLocked(clickedCard)) {
@@ -131,13 +129,17 @@ function flipCard(event) {
         if (firstCard.dataset.id !== clickedCard.dataset.id) {
             // Om korten har olika id, vänd tillbaka dem efter en fördröjning
             console.log("Korten har olika id, vänd tillbaka dem.");
+            //Räknar antal missar
             missar++;
             var missardiv = document.getElementById('missar');
             missardiv.innerText = 'Missar: ' + missar;
-            console.log('missar:', missar)
+            firstCard.classList.add('wrong');
+            clickedCard.classList.add('wrong');
             setTimeout(() => {
                 firstCard.classList.remove('flip');
                 clickedCard.classList.remove('flip');
+                firstCard.classList.remove('wrong');
+                clickedCard.classList.remove('wrong');
                 firstCard = null;
             }, 1000);
         } else {
@@ -149,6 +151,10 @@ function flipCard(event) {
     } else {
         // Om det inte finns något första kort valt än, spara det klickade kortet som första kort
         firstCard = clickedCard;
+        // Räknar antal drag
+        drag++;
+        var dragdiv = document.getElementById('drag');
+        dragdiv.innerText = 'Drag: ' + drag;
     }
 }
 
@@ -163,7 +169,6 @@ function lockCard(card) {
 function isCardLocked(card) {
 
     let isCardLocked = card.classList.contains('matched')
-
     return isCardLocked
 
 }
