@@ -121,8 +121,9 @@ function flipCard(event) {
     if (isCardLocked(clickedCard)) {
         return
     }
-
+    
     clickedCard.classList.add('flip');
+    clickedCard.removeEventListener('click', flipCard);
 
     if (firstCard) {
         // Om det finns ett första kort valt, jämför med det klickade kortet
@@ -140,6 +141,10 @@ function flipCard(event) {
                 clickedCard.classList.remove('flip');
                 firstCard.classList.remove('wrong');
                 clickedCard.classList.remove('wrong');
+
+                firstCard.addEventListener('click', flipCard);
+                clickedCard.addEventListener('click', flipCard);
+
                 firstCard = null;
             }, 1000);
         } else {
@@ -167,10 +172,8 @@ function lockCard(card) {
 }
 
 function isCardLocked(card) {
-
     let isCardLocked = card.classList.contains('matched')
     return isCardLocked
-
 }
 
 // Lägg till händelselyssnare för klick på varje kort
