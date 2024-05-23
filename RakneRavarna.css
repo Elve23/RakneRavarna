@@ -7,10 +7,6 @@ body {
   background-size: 100% 100%;
 }
 
-
-
-
-
 main {
   display: flex;
   justify-content: center;
@@ -366,3 +362,54 @@ top: 150px;
   rotate: 2%;
   position: absolute;
 }
+.new-title {
+  position: fixed; /* Ändra position till relative */
+  z-index: 3; /* Sätt ett högre z-index än fyrverkeri-GIF */
+  top:auto;
+  bottom: 70%;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 123px;
+  /* identical to box height */
+  text-align: center;
+}
+
+.new-undertitle {
+  position:fixed;
+  margin-top: 25%;
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 49px;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: #f7a604;
+}
+.image-holder {
+  max-width: 100%; 
+  height: 350px;
+  margin-left: 75%;
+  object-position: bottom;
+  overflow: hidden;
+}
+.image-style {
+  float: right; 
+  width: auto;
+  margin: -17%;
+  position:absolute;
+  top: 550px;
+  }
+  #fireworks{
+    width: 100%;
+    height: 350px;
+    background-image: url('fireworks.gif');
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Sätt ett lägre z-index än "title" */
+  }
+  
