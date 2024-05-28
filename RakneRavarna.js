@@ -1,3 +1,12 @@
+let matchedPairs = 0; // Variabel för att hålla reda på antalet matchade par
+
+// Funktion för att kontrollera om spelet är komplett
+function checkIfGameIsComplete() {
+    if (matchedPairs === shufflecards.length / 2) {
+        window.location.href = "Grattis.html";
+    }
+}
+
 /* Set the width of the sidebar to 250px (show it) */
 function openNav() {
     document.getElementById("mySidepanel").style.width = "250px";
@@ -151,6 +160,8 @@ function flipCard(event) {
             lockCard(firstCard)
             lockCard(clickedCard)
             firstCard = null
+            matchedPairs++; // Öka antalet matchade par
+            checkIfGameIsComplete(); // Kontrollera om spelet är klart
         }
 
     } else {
@@ -162,6 +173,7 @@ function flipCard(event) {
         dragdiv.innerText = 'Drag: ' + drag;
     }
 }
+
 
 function lockCard(card) {
     card.classList.add('matched')
