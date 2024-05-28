@@ -3,7 +3,9 @@ let matchedPairs = 0; // Variabel för att hålla reda på antalet matchade par
 // Funktion för att kontrollera om spelet är komplett
 function checkIfGameIsComplete() {
     if (matchedPairs === shufflecards.length / 2) {
-        window.location.href = "Grattis.html";
+        setTimeout(() => {
+            window.location.href = "Grattis.html";
+        }, 2000); // 2000 ms = 2 sekunders fördröjning
     }
 }
 
