@@ -163,7 +163,7 @@ top: 150px;
   bottom: 14.74%;
   background: rgba(233, 143, 35, 0.6);
   border-radius: 104px;
-  z-index: 1;
+  z-index: -2;
 
 }
 
@@ -378,21 +378,21 @@ top: 150px;
 
 .new-undertitle {
   position:fixed;
-  margin-top: 25%;
+  margin-top: 13%;
   font-family: 'Nunito';
   font-style: normal;
   font-weight: 500;
-  font-size: 36px;
+  font-size: 25px;
   line-height: 49px;
   text-align: center;
   letter-spacing: 0.06em;
 
-  color: #f7a604;
+  color: #000000;
 }
 .image-holder {
   max-width: 100%; 
   height: 350px;
-  margin-left: 75%;
+  margin-left: 60%;
   object-position: bottom;
   overflow: hidden;
 }
@@ -403,6 +403,7 @@ top: 150px;
   position:absolute;
   top: 550px;
   }
+
   #fireworks{
     width: 100%;
     height: 350px;
@@ -411,5 +412,10 @@ top: 150px;
     top: 0;
     left: 0;
     z-index: -1; /* Sätt ett lägre z-index än "title" */
+  }
+  
+  .grattisknapp{
+    margin-left: 19%;
+    margin-top: 5%;
   }
   
